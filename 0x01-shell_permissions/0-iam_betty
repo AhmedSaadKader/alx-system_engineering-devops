@@ -1,3 +1,2 @@
-su bitty\n
-su bitty
+#!/bin/bash
 su betty
