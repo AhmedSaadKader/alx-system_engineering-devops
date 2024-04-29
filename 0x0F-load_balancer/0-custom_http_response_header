@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# Installs Nginx
+
+# Update package repositories
+apt-get update
+
+# Install Nginx
+apt-get install -y nginx
+
+# Create directories and files for the web server
+mkdir -p /var/www/html
+touch /var/www/html/index.html
+echo "Hello World" > /var/www/html/index.html
+touch /var/www/html/404.html
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
+# Configure Nginx
+printf %s "server {
+    listen 80 default_server;           # Listen on port 80 for incoming HTTP requests
+    listen [::]:80 default_server;      # Listen on port 80 for IPv6 requests
+
+    add_header X-Served-By $HOSTNAME;   # Add custom HTTP header with the server hostname
+    root   /var/www/html;               # Set the root directory for serving files
+    index  index.html index.htm;        # Set default index files
+
+    # Redirect rule for /redirect_me
+    location /redirect_me {
+        return 301 https://github.com/AhmedSaadKader;
+    }
+
+    # Custom 404 error page configuration
+    error_page 404 /404.html;
+    location /404 {
+      root /var/www/html;               # Set the root directory for the custom 404 page
+      internal;                         # Deny external access to the custom 404 page
+    }
+}" > /etc/nginx/sites-available/default
+
+# Restart Nginx to apply the changes
+service nginx restart
