@@ -31,10 +31,3 @@ echo "$haproxy_config" >> /etc/haproxy/haproxy.cfg
 
 # Restart HAProxy service
 systemctl restart haproxy
-
-# Check HAProxy service status
-if systemctl is-active --quiet haproxy; then
-    echo "HAProxy configured successfully."
-else
-    echo "Failed to configure HAProxy. Check the configuration and retry."
-fi
