@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Fix the Nginx listening port
+cd /etc/nginx/sites-enabled || exit;
+rm default;
+ln -s /etc/nginx/sites-available/default default;
+service nginx restart
