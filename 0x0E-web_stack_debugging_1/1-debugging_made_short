@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Fix the Nginx listening port
+sudo sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
+sudo service nginx restart
+pkill -o nginx
