@@ -1,0 +1,25 @@
+Understanding what happens when you type "google.com" in your browser and hit Enter isn't just a geeky curiosity; it's foundational knowledge for anyone working in software engineering. From DNS requests to database queries, every step in the process contributes to the seamless experience we take for granted every time we browse the web. So, let's break it down in simple terms.
+
+typing "google.com" in your browser and pressing Enter sets off a complex chain of events involving DNS resolution, TCP/IP communication, security measures, load balancing, server-side processing, and database queries.
+
+Let's dive deeper into each component:
+
+DNS Request: When you type "google.com" in your browser, your computer doesn't know where to find it on the internet. It sends a DNS request to a DNS server, asking for the IP address associated with "google.com". The DNS server then responds with the IP address, allowing your browser to connect to the correct server.
+
+TCP/IP: Transmission Control Protocol (TCP) is responsible for breaking data into packets and ensuring they arrive at their destination intact and in the correct order. Internet Protocol (IP) handles the addressing and routing of these packets across the internet, allowing devices to communicate with each other.
+
+Firewall: Firewalls act as barriers between your computer and the internet, monitoring incoming and outgoing network traffic and blocking or allowing it based on predetermined security rules. They protect against unauthorized access and potential threats from malicious actors.
+
+HTTPS/SSL: Hypertext Transfer Protocol Secure (HTTPS) is a secure version of HTTP, the protocol used for transmitting data between your browser and the website's server. It encrypts the data using Secure Sockets Layer (SSL) or Transport Layer Security (TLS), ensuring that sensitive information remains private and secure during transmission.
+
+Load-Balancer: Load balancers distribute incoming traffic across multiple servers to ensure efficient use of resources and prevent any single server from becoming overwhelmed. They can perform various methods of load balancing, such as round-robin or least connections, to optimize performance and reliability.
+
+Web Server: Web servers are software applications responsible for serving web pages to users' browsers in response to HTTP requests. They process incoming requests, retrieve the requested files or data, and send them back to the client's browser for display.
+
+Application Server: Application servers handle the execution of server-side code and the generation of dynamic content for web applications. They provide an environment for running server-side scripts, executing database queries, and processing business logic before returning results to the client.
+
+Database: Databases store and manage the structured data used by web applications. They allow for the storage, retrieval, and manipulation of data in a structured format, enabling web applications to provide dynamic content and interact with users' input.
+
+Each of these components plays a crucial role in the journey from typing "google.com" in your browser to seeing the search results displayed on your screen. Understanding how they work together is essential for building and maintaining robust and secure web applications.
+
+Blog Post: [https://www.linkedin.com/pulse/what-happens-when-you-type-googlecom-your-browser-press-ahmed-saad-tez2f/]
