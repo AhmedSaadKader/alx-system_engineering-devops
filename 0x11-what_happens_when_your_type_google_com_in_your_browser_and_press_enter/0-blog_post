@@ -1,6 +1,6 @@
 Understanding what happens when you type "google.com" in your browser and hit Enter isn't just a geeky curiosity; it's foundational knowledge for anyone working in software engineering. From DNS requests to database queries, every step in the process contributes to the seamless experience we take for granted every time we browse the web. So, let's break it down in simple terms.
 
-typing "google.com" in your browser and pressing Enter sets off a complex chain of events involving DNS resolution, TCP/IP communication, security measures, load balancing, server-side processing, and database queries.
+Typing "google.com" in your browser and pressing Enter sets off a complex chain of events involving DNS resolution, TCP/IP communication, security measures, load balancing, server-side processing, and database queries.
 
 Let's dive deeper into each component:
 

@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-# Fix the holbertonschool/265-0 container
+# Update package list and install Apache
+apt-get update
+apt-get install -y apache2
 
-echo "ServerName localhost" >> /etc/apache2.conf
-service apache2 start
+# Create HTML file with desired content
+echo "Hello Holberton" > /var/www/html/index.html
+
+# Restart Apache service
+service apache2 restart
