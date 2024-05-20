@@ -19,4 +19,7 @@ if __name__ == "__main__":
     with open('{}.csv'.format(employee_id), 'w') as csvfile:
         writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         for task in userTodos:
-            writer.writerow([employee_id, userData['username'], task['completed'], task['title']])
+            writer.writerow(
+                [employee_id, userData['username'],
+                 task['completed'], task['title']]
+                )
