@@ -10,12 +10,17 @@ import json
 if __name__ == "__main__":
     completed = []
     employee_id = sys.argv[1]
-    user = requests.get('https://jsonplaceholder.typicode.com/users/{}'.format(employee_id))
-    userTodos = requests.get('https://jsonplaceholder.typicode.com/todos', params={"userId": employee_id}).json()
+    user = requests.get(
+        'https://jsonplaceholder.typicode.com/users/{}'.format(employee_id))
+    userTodos = requests.get(
+        'https://jsonplaceholder.typicode.com/todos',
+        params={"userId": employee_id}).json()
     userData = json.loads(user.text)
     for item in userTodos:
         if item.get("completed") is True:
             completed.append(item.get("title"))
-    print('Employee {} is done with tasks({}/{}):'.format(userData["name"], len(completed), len(userTodos) ))
+    print(
+        'Employee {} is done with tasks({}/{}):'
+        .format(userData["name"], len(completed), len(userTodos)))
     for task in completed:
         print('\t {}'.format(task))
